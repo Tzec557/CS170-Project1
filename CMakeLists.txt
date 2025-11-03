@@ -17,6 +17,7 @@ add_executable(puzzle
   Problem.cpp
   UniformCost.cpp
   AStarMisplaced.cpp
+  AStarEuclidean.cpp
 )
 
 target_compile_options(puzzle PRIVATE -Wall -Wextra -Wconversion)
