@@ -10,6 +10,7 @@ Your challenges in this project
 
 Your design (objects and methods)
 - Node class:
+
         - Stores current puzzle state, pointer to parent, depth (g), heuristic value (h), and total cost (f = g + h).
 
         - Methods: comparison operator for priority queue, printing state for trace output.
