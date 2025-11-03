@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/puzzle.dir/AStarEuclidean.cpp.o"
+  "CMakeFiles/puzzle.dir/AStarEuclidean.cpp.o.d"
   "CMakeFiles/puzzle.dir/AStarMisplaced.cpp.o"
   "CMakeFiles/puzzle.dir/AStarMisplaced.cpp.o.d"
   "CMakeFiles/puzzle.dir/Node.cpp.o"
