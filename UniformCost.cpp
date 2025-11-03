@@ -36,11 +36,11 @@ shared_ptr<Node> uniformCostSearch(const Problem& problem) {
         auto node = fringe.top(); fringe.pop();
         ++expanded;
         maxFrontier = max(maxFrontier, fringe.size());
-        // cout << "The best state to expand with g(n) = " << node->g << " and h(n) = " << node->h << " is...\n";
-        // printBoard(node->state);
-        // cout << "Expanding this node...\n";
+        cout << "The best state to expand with g(n) = " << node->g << " and h(n) = " << node->h << " is...\n";
+        printBoard(node->state);
+        cout << "Expanding this node...\n";
         if (problem.goalTest(node->state)) {
-            // cout << "Goal!!!\n";
+            cout << "Goal!!!\n";
             cout << "To solve this problem the search algorithm expanded a total of " << expanded << " nodes.\n";
             cout << "The maximum number of nodes in the queue at any one time: " << maxFrontier << "\n";
             cout << "The depth of the goal node was " << node->g << ".\n";

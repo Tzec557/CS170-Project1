@@ -37,7 +37,7 @@ void printSolution(shared_ptr<Node> goal) {
 }
 
 int main() {
-    cout << "Welcome to Zec's 8-puzzle solver!\n";
+    cout << "Welcome to Trikaru's 8-puzzle solver!\n";
     cout << "Type 1 to use a default puzzle, or 2 to enter your own puzzle: ";
     int choice;
     cin >> choice;
