@@ -35,6 +35,10 @@
 ## Did you implement a graph search (keeping record of all explored nodes), or did you use a tree search algorithm? If you tried both, you can compare the number of nodes created, and number of nodes expanded for each version (tree search and graph search). Note that you don’t ned to implement and compare both tree and graph searches. But if you did, you can write about your observations.
 
 ## Comparing Heuristic Functions in terms of time and space and analyzing the results with diagrams and/or tables. Sample tables and diagrams follow.
+<img width="501" height="597" alt="截屏2025-11-03 下午4 01 27" src="https://github.com/user-attachments/assets/5570835d-9dd4-46e4-9f59-e1c161a8479c" /><img width="471" height="328" alt="截屏2025-11-03 下午4 05 20" src="https://github.com/user-attachments/assets/82e0fa9c-327c-4ae2-867f-8ee8bec0ddc7" />
+
+From the table comparing different search algorithms across multiple puzzles, we can see that A* with heuristics (Misplaced Tile and Euclidean) consistently expands fewer nodes and uses less memory than Uniform Cost Search. The Euclidean heuristic often results in slightly fewer nodes expanded than the Misplaced Tile, indicating it is a slightly more informed heuristic.
+
 
 <img width="600" height="700" alt="截屏2025-11-03 下午3 48 10" src="https://github.com/user-attachments/assets/9377c6c5-01fb-4bff-b358-15c6bda92d0a" />
 
