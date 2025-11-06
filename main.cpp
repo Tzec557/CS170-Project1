@@ -44,7 +44,7 @@ int main() {
 
     vector<int> initial(9);
     if (choice == 1) {
-        initial ={8,7,1,6,0,2,5,4,3}; //{3,1,2,4,0,6,7,5,8}; 
+        initial ={1,2,3,4,5,6,7,0,8}; //{3,1,2,4,0,6,7,5,8}; 
     } else {
         cout << "Enter your puzzle as 9 numbers (0 for blank), separated by spaces:\n";
         for (int i = 0; i < 9; ++i) {
@@ -82,6 +82,15 @@ int main() {
 return 0;
 
 }
+/*
+referenced: 
+
+https://gist.github.com/sameer-j/76c38850f876661daf5d
+https://github.com/sevdeawesome/A-Star-Search
+https://sandipanweb.wordpress.com/2017/03/16/using-uninformed-informed-search-algorithms-to-solve-8-puzzle-n-puzzle/
+
+*/ 
+
     //test Problem class
     // vector<int> initial = {3, 1, 2, 4, 0, 6, 7, 5, 8};
     // vector<int> goal = {1, 2, 3, 4, 5, 6, 7, 8, 0};
@@ -157,11 +166,4 @@ return 0;
 //     return 0;
 // }
 
-/*
-referenced: 
 
-https://gist.github.com/sameer-j/76c38850f876661daf5d
-https://github.com/sevdeawesome/A-Star-Search
-https://sandipanweb.wordpress.com/2017/03/16/using-uninformed-informed-search-algorithms-to-solve-8-puzzle-n-puzzle/
-
-*/ 
