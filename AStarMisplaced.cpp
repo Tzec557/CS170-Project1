@@ -21,16 +21,22 @@ using namespace std;
 static double misplacedHeuristic(const vector<int>& state, const vector<int>& goal) {
     int count = 0;
     for (size_t i = 0; i < state.size(); ++i) {
-        if (state[i] != 0 && state[i] != goal[i]) ++count;
+        // Skip the blank: it does not contribute to heuristic value
+        if (state[i] == 0) continue;
+
+        // If the tile at position i is not the same as goal's tile at i, then
+        // this tile is "misplaced" and contributes +1 to h.
+        if (state[i] != goal[i]) ++count;
     }
+    // A* expects a numeric h; double keeps the (g+h) arithmetic uniform if g can be double.
     return static_cast<double>(count);
 }
 
+// Priority comparator for A* (min-heap by f=g+h; tie-break on smaller h for reproducibility)
 struct AComparator {
     bool operator()(const shared_ptr<Node>& a, const shared_ptr<Node>& b) const {
-    // Comparator orders by f (g+h); tie-break on smaller h for reproducibility
-    if (a->f != b->f) return a->f > b->f;
-    return a->h > b->h; // tie-break: smaller h preferred
+        if (a->f != b->f) return a->f > b->f; // lower f has higher priority
+        return a->h > b->h;                   // if f ties, prefer node with smaller h
     }
 };
 

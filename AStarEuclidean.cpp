@@ -6,7 +6,7 @@
 #include <algorithm>
 #include <iostream>
 
-using namespace std;
+using namespace std;xw
 
 static void printBoard(const vector<int>& state) {
     // Helper: print board using 'b' to indicate the blank (works for n x n boards)
@@ -15,7 +15,7 @@ static void printBoard(const vector<int>& state) {
         if (state[i] == 0) cout << 'b' << " ";
         else cout << state[i] << " ";
         if (i % n == n - 1) cout << '\n';
-    }
+    }xw
 }
 
 static double euclideanHeuristic(const vector<int>& state, const vector<int>& goal) {

@@ -19,7 +19,8 @@ using namespace std;
 
 struct UCComparator {
     bool operator()(const shared_ptr<Node>& a, const shared_ptr<Node>& b) const {
-    // Priority queue comparator: prefer lower g (path cost). If g ties, prefer lower h as a tie-breaker.
+    // Priority queue comparator
+    // Prefer lower g (path cost). If g ties, prefer lower h as a tie-breaker.
     if (a->g != b->g) return a->g > b->g; // min-heap by g
     return a->h > b->h; // tie-breaker: smaller h preferred
     }
